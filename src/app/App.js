@@ -36,7 +36,7 @@ class App extends Component {
 
               <Route path="/dogs/:id"
                 render={routerProps => (
-                  <DogDetailPage {...routerProps.match.params.id} />
+                  <DogDetailPage {...routerProps} />
                 )}
               />
 
