@@ -10,7 +10,7 @@ class DogItem extends Component {
       <li className="DogItem">
         <h2>{dog.name}</h2>
         <img src={dog.url} alt={dog.name} />
-        <p>Lives: {dog.lives}</p>
+        <h3>{dog.type}</h3>
       </li>
     );
   }
