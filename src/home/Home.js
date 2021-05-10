@@ -12,7 +12,7 @@ export default class Home extends Component {
         </header>
 
         <p>
-          <Link to='/resources'>See the List</Link>
+          <Link to='/dogs'>See the List of Doggos</Link>
         </p>
       </div>
     );
