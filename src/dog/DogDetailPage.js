@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './DogsDetailPage.css';
+import './DogDetailPage.css';
 
 export default class DogsDetailPage extends Component {
 
