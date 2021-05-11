@@ -1,3 +1,36 @@
-.DogDetailPage {
+.DogDetail{
+  padding: 10px;
+  margin: 10px 20px;
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.DogDetail .Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid darkgray;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 20px;
+}
+
+.DogDetail img {
+  width: 80%;
+  object-fit: contain;
+}
+
+.DogDetail p {
+  margin: 10px;
+  font-weight: bold;
+  text-align: center;
 }

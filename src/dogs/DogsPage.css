@@ -1,3 +1,18 @@
 .DogsPage {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.DogsPage h1 {
+  text-align: center;
+  font-size: xx-large;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid darkgray;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 20px;
+  width: 200px;
 }

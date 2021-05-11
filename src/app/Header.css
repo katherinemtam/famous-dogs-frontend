@@ -1,5 +1,6 @@
 .Header {
   padding: 20px;
+  box-shadow: 12px 12px 2px 1px  grey;
   border-bottom: 1px solid lightgray;
   display: grid;
   grid-template-columns: 1fr 2fr;
