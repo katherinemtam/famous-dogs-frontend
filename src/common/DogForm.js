@@ -49,7 +49,7 @@ class DogForm extends Component {
         <p>
           <label>
             <span>Dog Name</span>
-            <input name="name" required placeholder="Name of the famous dog..."
+            <input name="name" required placeholder="Name of the Famous Dog"
               value={name} onChange={this.handleChangeName} 
             />
           </label>
@@ -57,7 +57,7 @@ class DogForm extends Component {
 
         <p>
           <label>
-            <span>Dog Type</span>
+            <span>Breed</span>
             <input name="type" required placeholder="Type or Breed"
               value={type} onChange={this.handleChangeType} 
             />
@@ -66,8 +66,8 @@ class DogForm extends Component {
 
         <p>
           <label>
-            <span>Cat Image Url</span>
-            <input name="url" required placeholder="Url to image of dog"
+            <span>Dog Image Url</span>
+            <input name="url" required placeholder="URL to the Image of the Dog"
               value={url} onChange={this.handleChangeUrl} 
             />
           </label>
@@ -76,7 +76,7 @@ class DogForm extends Component {
         <p>
           <label>
             <span>Featured</span>
-            <input name="media" required placeholder="Name of movie/show the dog was featured"
+            <input name="media" required placeholder="Name of Movie/Show the Dog was Featured in"
               value={media} onChange={this.handleChangeMedia} 
             />
           </label>
@@ -87,7 +87,7 @@ class DogForm extends Component {
             <span>Featured Year</span>
             <input name="year" required pattern="\d{4}"
               title="Should be a four digit year like 2021"
-              placeholder="Enter a four-digit year"
+              placeholder="Enter a Four-Digit Year"
               value={year} onChange={this.handleChangeYear} 
             />
           </label>
@@ -95,7 +95,7 @@ class DogForm extends Component {
 
         <p>
           <label>
-            <span>Is Animated?</span>
+            <span>Is the Dog Animated?</span>
             <span className="vertically-centered">
               <input name="isAnimated"
                 type="checkbox"
