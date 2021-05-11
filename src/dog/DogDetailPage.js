@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import Loader from '../common/Loader';
+import { Link } from 'react-router-dom';
 import { getDogId, deleteDog } from '../utils/famous-dogs-api';
 import './DogDetailPage.css';
 
@@ -39,13 +41,15 @@ export default class DogsDetailPage extends Component {
   }
 
   render() {
-    const { dog } = this.state;
+    const { dog, loading } = this.state;
 
     if (!dog) return null;
 
     return (
       <div className="DogDetail">
         <div className="Wrapper">
+          <Loader loading={loading}/>
+          
           <h2>{dog.name}'s Detail Page</h2>
           <img src={dog.url} alt={dog.name}/>
           <p>Dog ID: {dog.id}</p>
@@ -54,11 +58,17 @@ export default class DogsDetailPage extends Component {
           <p>Featured: {dog.media}</p>
           <p>Featured Year: {dog.year}</p>
           <p>Animated: {dog.isAnimated.toString()} </p>
-          <button className="delete" onClick={this.handleDelete}
-          >Release this Dog</button>
+
+          <Link to={`/dogs/${dog.id}/update`}>
+            Update {dog.name}'s Profile
+          </Link>
+
+          <button className="delete" onClick={this.handleDelete}>
+            Release {dog.name}
+          </button>
+
         </div>
       </div>
     );
   }
-
 }

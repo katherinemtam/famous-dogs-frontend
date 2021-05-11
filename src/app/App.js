@@ -46,6 +46,12 @@ class App extends Component {
                   <DogDetailPage {...routerProps} />
                 )}
               />
+            
+              <Route path="/dogs/:id/update" exact={true}
+                render={routerProps => (
+                  <DogDetailPage {...routerProps} />
+                )}
+              />
               
               <Redirect to="/" />
 

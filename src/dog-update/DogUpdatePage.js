@@ -14,7 +14,7 @@ class DogUpdatePage extends Component {
 
     return ( 
       <div className="DogEditPage">
-        <h2>Update {dog.name}</h2>
+        <h2>Update {dog.name}'s Profile</h2>
         <DogForm dog={dog} onSubmit={this.handleUpdate}/>
       </div>
     );
