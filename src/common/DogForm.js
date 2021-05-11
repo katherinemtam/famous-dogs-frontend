@@ -3,11 +3,11 @@ import './DogForm.css';
 
 class DogForm extends Component {
   state = { 
-    name: '',
-    type: '',
-    url: '',
-    media: '',
-    year: '',
+    name: 'Dog',
+    type: 'Dog',
+    url: 'https://placedog.net/500/280',
+    media: 'Doggo Life',
+    year: '2021',
     isAnimated: false
   }
 
@@ -106,7 +106,7 @@ class DogForm extends Component {
         </p>
 
         <p>
-          <button>Add Cat</button>
+          <button>Add Dog</button>
         </p>
 
       </form>

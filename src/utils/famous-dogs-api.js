@@ -13,6 +13,6 @@ export async function getDogId(id) {
 }
 
 export async function addDog(dog) {
-  const response = await (await request.post(URL)).statusType('json').send(dog);
-  return response.body.id;
+  const response = await request.post(URL).send(dog);
+  return response.body;
 }

@@ -9,19 +9,17 @@ class DogAddPage extends Component {
     loading: false  
   }
 
-  handleAdd = async dog => {
+  handleAdd = async dogToAdd => {
     const { history } = this.props;
 
     try {
-      this.setState({ loading:true });
-      const id = await addDog(dog);
-      history.push(`/dogs/${id}`);
+      this.setState({ loading: true });
+      const newDog = await addDog(dogToAdd);
+      history.push(`/dogs/${newDog.id}`);
     }
     catch (err) {
-      console.log('ERROR', err.message);
-    }
-    finally {
       this.setState({ loading: false });
+      console.log(err.message);
     }
   }
 
