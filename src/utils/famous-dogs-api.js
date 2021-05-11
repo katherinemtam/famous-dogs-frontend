@@ -16,3 +16,8 @@ export async function addDog(dog) {
   const response = await request.post(URL).send(dog);
   return response.body;
 }
+
+export async function deleteDog(id) {
+  const response = await request.delete(`${URL}/${id}`);
+  return response.body;
+}
