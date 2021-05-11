@@ -28,11 +28,12 @@ export default class DogsDetailPage extends Component {
         <div className="Wrapper">
           <h2>{dog.name}'s Detail Page</h2>
           <img src={dog.url} alt={dog.name}/>
-          <p>Dog id: {dog.id}</p>
-          <p>Dog name: {dog.name}</p>
-          <p>Dog type: {dog.type}</p>
+          <p>Dog ID: {dog.id}</p>
+          <p>Name: {dog.name}</p>
+          <p>Breed: {dog.type}</p>
           <p>Featured: {dog.media}</p>
           <p>Featured Year: {dog.year}</p>
+          <p>Animated: {dog.isAnimated.toString()} </p>
         </div>
       </div>
     );
