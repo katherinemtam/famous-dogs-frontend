@@ -24,14 +24,16 @@ export default class DogsDetailPage extends Component {
     if (!dog) return null;
 
     return (
-      <div className="Dog Detail">
-        <h2>Dog Detail Page</h2>
-        <p>{dog.url}</p>
-        <p>Dog id: {dog.id}</p>
-        <p>Dog name: {dog.name}</p>
-        <p>Dog type: {dog.type}</p>
-        <p>Featured: {dog.media}</p>
-        <p>Featured Year: {dog.year}</p>
+      <div className="DogDetail">
+        <div className="Wrapper">
+          <h2>{dog.name}'s Detail Page</h2>
+          <img src={dog.url} alt={dog.name}/>
+          <p>Dog id: {dog.id}</p>
+          <p>Dog name: {dog.name}</p>
+          <p>Dog type: {dog.type}</p>
+          <p>Featured: {dog.media}</p>
+          <p>Featured Year: {dog.year}</p>
+        </div>
       </div>
     );
   }

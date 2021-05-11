@@ -7,8 +7,10 @@ class Header extends Component {
   render() {
     return (
       <header className="Header">
-
-        <h1>React App</h1>
+        <div>
+          <h1>Famous Dogs API</h1>
+          <h3>Powered by React</h3>
+        </div>
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/dogs">Dogs</NavLink>
