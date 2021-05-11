@@ -18,6 +18,13 @@ export default class DogsDetailPage extends Component {
     }
   }
 
+  handleDelete = () => {
+    const { dog } = this.state;
+    const confirmation = `Are you sure you want to release ${dog.name}? You will not be able to get ${dog.name} back! (PS: You are deleting this entry.)`;
+
+    if (!window.confirm(confirmation)) return;
+  }
+
   render() {
     const { dog } = this.state;
 
@@ -34,6 +41,8 @@ export default class DogsDetailPage extends Component {
           <p>Featured: {dog.media}</p>
           <p>Featured Year: {dog.year}</p>
           <p>Animated: {dog.isAnimated.toString()} </p>
+          <button className="delete" onClick={this.handleDelete}
+          >Release this Dog</button>
         </div>
       </div>
     );
