@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <header className="Header">
         <div>
-          <h1>Famous Dogs API</h1>
+          <h1>Famous Dogs</h1>
           <h3>Powered by React</h3>
         </div>
         <nav>
