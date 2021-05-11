@@ -12,8 +12,8 @@ class Header extends Component {
           <h3>Powered by React</h3>
         </div>
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/dogs">Dogs</NavLink>
+          <NavLink to="/" exact={true}>Home</NavLink>
+          <NavLink to="/dogs" exact={true}>Dogs</NavLink>
           <NavLink to="/dogs/add">Add Dog</NavLink>
         </nav>
       </header>
