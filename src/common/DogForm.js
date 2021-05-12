@@ -4,11 +4,11 @@ import './DogForm.css';
 class DogForm extends Component {
   state = { 
     // id: '',
-    name: 'Dog',
-    type: 'Dog',
-    url: 'https://placedog.net/500/280',
-    media: 'Doggo Life',
-    year: '2021',
+    name: '',
+    type: '',
+    url: '',
+    media: '',
+    year: '',
     isAnimated: false
   }
 
