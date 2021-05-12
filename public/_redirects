@@ -1,2 +1,2 @@
-/api/*  https://famous-dogs-api.herokuapp.com/api/:splat
+/api/*  https://famous-dogs-api.herokuapp.com/api/:splat 200!
 /*    /index.html   200
