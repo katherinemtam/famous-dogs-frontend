@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import DogsPage from '../dogs/DogsPage';
 import DogDetailPage from '../dog/DogDetailPage';
+import DogAddPage from '../dog-add/DogAddPage';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +13,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+import DogUpdatePage from '../dog-update/DogUpdatePage';
 
 class App extends Component {
 
@@ -34,12 +37,24 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/dogs/:id"
+              <Route path="/dogs/add"
+                render={routerProps => (
+                  <DogAddPage {...routerProps} />
+                )}
+              />
+
+              <Route path="/dogs/:id" exact={true}
                 render={routerProps => (
                   <DogDetailPage {...routerProps} />
                 )}
               />
-
+            
+              <Route path="/dogs/:id/update" exact={true}
+                render={routerProps => (
+                  <DogUpdatePage {...routerProps} />
+                )}
+              />
+              
               <Redirect to="/" />
 
             </Switch>
