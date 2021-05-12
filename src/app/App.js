@@ -5,6 +5,7 @@ import Home from '../home/Home';
 import DogsPage from '../dogs/DogsPage';
 import DogDetailPage from '../dog/DogDetailPage';
 import DogAddPage from '../dog-add/DogAddPage';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -12,6 +13,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+import DogUpdatePage from '../dog-update/DogUpdatePage';
 
 class App extends Component {
 
@@ -49,7 +51,7 @@ class App extends Component {
             
               <Route path="/dogs/:id/update" exact={true}
                 render={routerProps => (
-                  <DogDetailPage {...routerProps} />
+                  <DogUpdatePage {...routerProps} />
                 )}
               />
               

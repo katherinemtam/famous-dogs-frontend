@@ -3,6 +3,7 @@ import './DogForm.css';
 
 class DogForm extends Component {
   state = { 
+    // id: '',
     name: 'Dog',
     type: 'Dog',
     url: 'https://placedog.net/500/280',
@@ -11,9 +12,17 @@ class DogForm extends Component {
     isAnimated: false
   }
 
+  componentDidMount(){
+    const { dog } = this.props;
+
+    if (!dog) return;
+    this.setState(dog);
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit(this.state);
+    console.log(this.state);
   }
 
   handleChangeName = ({ target }) => {
@@ -43,7 +52,9 @@ class DogForm extends Component {
   render() { 
 
     const { name, type, url, media, year, isAnimated } = this.state;
-
+    const { dog } = this.props;
+    console.log(dog);
+    
     return ( 
       <form className="DogForm" onSubmit={this.handleSubmit}>
         <p>
@@ -106,7 +117,7 @@ class DogForm extends Component {
         </p>
 
         <p>
-          <button>Add Dog</button>
+          <button>{ dog ? 'Update' : 'Add'} Dog</button>
         </p>
 
       </form>

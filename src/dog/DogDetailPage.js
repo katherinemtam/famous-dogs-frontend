@@ -11,12 +11,15 @@ export default class DogsDetailPage extends Component {
 
   async componentDidMount() {
     const { match } = this.props;
-    const dog = await getDogId(match.params.id);
-    if (dog) {
+    try {
+      const dog = await getDogId(match.params.id);
       this.setState({ dog: dog });
     }
-    else {
-      console.log('No dog received! Check network tab.');
+    catch (err) {
+      console.log(err.message);
+    }
+    finally {
+      this.setState({ loading: false });
     }
   }
 

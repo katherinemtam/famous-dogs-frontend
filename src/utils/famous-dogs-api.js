@@ -21,3 +21,8 @@ export async function deleteDog(id) {
   const response = await request.delete(`${URL}/${id}`);
   return response.body;
 }
+
+export async function updateDog(dog) {
+  const response = await request.put(`${URL}/${dog.id}`).send(dog);
+  return response.body;
+}
