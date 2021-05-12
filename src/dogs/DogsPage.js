@@ -23,7 +23,7 @@ export default class DogsPage extends Component {
 
     return (
       <div className="DogsPage">
-        <h1>List o' Dogs</h1>
+        <h1>Residents</h1>
 
         <DogList dogs={dogs} />
 
